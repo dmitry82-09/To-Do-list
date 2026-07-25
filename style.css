@@ -1,0 +1,132 @@
+/* style.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: system-ui, sans-serif;
+    background: #f5f7fa;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.app {
+    max-width: 600px;
+    width: 100%;
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+.controls form {
+    flex: 1 1 100%;
+    display: flex;
+    gap: 8px;
+}
+.controls input[type="text"] {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.controls button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.controls button:hover {
+    background: #0056b3;
+}
+#searchInput {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.filters {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+.filter-btn {
+    padding: 6px 16px;
+    border: 1px solid #ddd;
+    background: transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+.filter-btn.active {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+}
+.task-item:last-child {
+    border-bottom: none;
+}
+.task-item .task-text {
+    flex: 1;
+    font-size: 16px;
+    word-break: break-word;
+    cursor: pointer;
+}
+.task-item .task-text.done {
+    text-decoration: line-through;
+    color: #999;
+}
+.task-item .delete-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.task-item .delete-btn:hover {
+    background: #b02a37;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 480px) {
+    .controls form {
+        flex-wrap: wrap;
+    }
+    .controls form button {
+        width: 100%;
+    }
+    .task-item {
+        padding: 14px 0;
+    }
+}
